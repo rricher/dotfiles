@@ -1,0 +1,80 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "final_space": true,
+  "version": 2,
+  "palette": {
+    "git-foreground": "#193549",
+    "git": "#FFFB38",
+    "git-modified": "#FF9248",
+    "git-diverged": "#FF4500",
+    "git-ahead": "#B388FF",
+    "git-behind": "#B388FF",
+    "red": "#FF0000",
+    "green": "#00FF00",
+    "blue": "#0000FF",
+    "white": "#FFFFFF",
+    "black": "#111111"
+  },
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "template": "{{ .UserName }} "
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          "background": "transparent",
+          "foreground": "blue",
+          "template": "{{ .Path }}",
+          "properties": {
+            "style": "full"
+          }
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "git-foreground",
+          "background": "transparent",
+          "template": " {{ .HEAD }}{{if or (.Working.Changed) (.Staging.Changed)}}*{{end}}",
+          "properties": {
+            "branch_icon": "",
+            "fetch_status": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground_templates": [
+            "{{if gt .Code 0}}red{{end}}",
+            "{{if eq .Code 0}}magenta{{end}}"
+          ],
+          "foreground": "magenta",
+          "background": "transparent",
+          "template": "❯"
+        }
+      ]
+    }
+  ],
+  "transient_prompt": {
+    "foreground_templates": [
+      "{{if gt .Code 0}}red{{end}}",
+      "{{if eq .Code 0}}magenta{{end}}"
+    ],
+    "background": "transparent",
+    "foreground": "magenta",
+    "template": "❯"
+  }
+}
