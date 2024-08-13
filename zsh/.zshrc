@@ -27,7 +27,7 @@ zinit light zsh-users/zsh-autosuggestions
 
 # start oh-my-posh and add the theme
 # eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/rudolfs-light.omp.json)"
-eval "$(oh-my-posh init zsh --config /home/ryan/.config/ohmyposh/zen.toml)"
+eval "$(oh-my-posh init zsh --config /home/ryan/.config/oh-my-posh/zen.toml)"
 
 # Load completions
 autoload -U compinit; compinit
