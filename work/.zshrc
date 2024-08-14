@@ -1,6 +1,4 @@
 # add some things to path
-# append
-# path+=("~/.local/bin")
 path+=("$HOME/.local/bin")
 # export to sub-processes (make it inherited by child processes)
 export PATH
@@ -64,7 +62,6 @@ zinit wait"0c" light-mode atclone'mkdir -p $ZPFX/{bin,man/man1}' \
     atpull'%atclone' \
     dl'https://raw.githubusercontent.com/junegunn/fzf/master/shell/completion.zsh -> _fzf_completion;
       https://raw.githubusercontent.com/junegunn/fzf/master/shell/key-bindings.zsh -> key-bindings.zsh;
-      https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf-tmux.1 -> $ZPFX/man/man1/fzf-tmux.1;
       https://raw.githubusercontent.com/junegunn/fzf/master/man/man1/fzf.1 -> $ZPFX/man/man1/fzf.1' \
     from'gh-r' \
     id-as'junegunn/fzf' \

@@ -1,0 +1,11 @@
+# This is Git's per-user configuration file.
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[user]
+	name = rricher
+	email = ryanricher@gmail.com
+[core]
+	editor = code --wait
