@@ -1,0 +1,31 @@
+#!/bin/zsh
+#
+# .zstyles - Set zstyle settings for plugins that need them.
+#
+
+#
+# Antidote
+#
+
+# zstyle ':antidote:bundle' file ${ZDOTDIR:-~}/.zplugins.txt
+zstyle ':antidote:bundle' use-friendly-names 'yes'
+
+# ez-compinit is pretty simple.
+# Run this plugin near the top of your config before any other plugins or scripts that might call compdef.
+# It's also recommended to pick a completion style. You set a compstyle with the following zstyle statement:
+# See available completion styles with 'compstyle -l'
+zstyle ':plugin:ez-compinit' 'compstyle' 'gremlin'
+
+# disable sort when completing `git checkout`
+zstyle ':completion:*:git-checkout:*' sort false
+# set descriptions format to enable group support
+# NOTE: don't use escape sequences here, fzf-tab will ignore them
+zstyle ':completion:*:descriptions' format '[%d]'
+# set list-colors to enable filename colorizing
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# force zsh not to show completion menu, which allows fzf-tab to capture the unambiguous prefix
+zstyle ':completion:*' menu no
+# preview directory's content with ls when completing cd
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls -A --color=auto --group-directories-first $realpath'
+# switch group using `<` and `>`
+zstyle ':fzf-tab:*' switch-group '<' '>'
