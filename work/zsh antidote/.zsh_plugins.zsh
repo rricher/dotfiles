@@ -4,8 +4,6 @@ fpath+=( $HOME/.cache/antidote/mattmc3/zephyr/plugins/color )
 source $HOME/.cache/antidote/mattmc3/zephyr/plugins/color/color.plugin.zsh
 fpath+=( $HOME/.cache/antidote/mattmc3/zephyr/plugins/directory )
 source $HOME/.cache/antidote/mattmc3/zephyr/plugins/directory/directory.plugin.zsh
-fpath+=( $HOME/.cache/antidote/mattmc3/zephyr/plugins/editor )
-source $HOME/.cache/antidote/mattmc3/zephyr/plugins/editor/editor.plugin.zsh
 fpath+=( $HOME/.cache/antidote/mattmc3/zephyr/plugins/environment )
 source $HOME/.cache/antidote/mattmc3/zephyr/plugins/environment/environment.plugin.zsh
 fpath+=( $HOME/.cache/antidote/mattmc3/zephyr/plugins/history )

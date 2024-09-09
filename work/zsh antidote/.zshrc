@@ -33,3 +33,5 @@ bindkey "^[[1;5B" history-search-forward
 # Create an amazing Zsh config using antidote plugins.
 source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 antidote load
+
+eval "$(zoxide init --cmd cd zsh)"

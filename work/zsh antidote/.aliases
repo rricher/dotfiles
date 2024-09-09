@@ -13,10 +13,14 @@ alias c="clear"
 # fix common typos
 alias quit='exit'
 alias cd..='cd ..'
+# python
+alias python="python3"
+alias pip="pip3"
 
 # tar
+alias targz="tar -cvzf"
 alias tarls="tar -tvf"
-alias untar="tar -xf"
+alias untar="tar -xvzf"
 
 # find
 alias fd='find . -type d -name'
